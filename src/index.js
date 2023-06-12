@@ -5,6 +5,8 @@ import {
 
 const taskList = document.querySelector('.tasks_list');
 const btnAllClearChecked = document.querySelector('.btn_clear_all_completed_tasks');
+const inputInsertTask = document.querySelector('.input_insert_task');
+const btnAddTask = document.querySelector('.btn_add_task');
 
 window.onload = () => {
   renderTask(taskList);
@@ -12,8 +14,7 @@ window.onload = () => {
 };
 
 // Add a task listener
-const inputInsertTask = document.querySelector('.input_insert_task');
-const btnAddTask = document.querySelector('.btn_add_task');
+
 btnAddTask.addEventListener('click', () => {
   const description = checkTextContent(inputInsertTask.value.trim());
   if (description) {
