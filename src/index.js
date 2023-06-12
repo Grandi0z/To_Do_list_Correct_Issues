@@ -4,9 +4,9 @@ import {
 } from './modules/viewFunction.js';
 
 const taskList = document.querySelector('.tasks_list');
-const btnAllClearChecked = document.querySelector('.btn_clear_all_completed_tasks');
+const ClearAllCheckedButton = document.querySelector('.btn_clear_all_completed_tasks');
 const inputInsertTask = document.querySelector('.input_insert_task');
-const btnAddTask = document.querySelector('.btn_add_task');
+const AddTaskButton = document.querySelector('.btn_add_task');
 
 window.onload = () => {
   renderTask(taskList);
@@ -15,7 +15,7 @@ window.onload = () => {
 
 // Add a task listener
 
-btnAddTask.addEventListener('click', () => {
+AddTaskButton.addEventListener('click', () => {
   const description = checkTextContent(inputInsertTask.value.trim());
   if (description) {
     populateTask(description, taskList);
@@ -33,7 +33,7 @@ taskList.addEventListener('click', (e) => {
 });
 
 // Clear all checked tasks
-btnAllClearChecked.addEventListener('click', () => {
+ClearAllCheckedButton.addEventListener('click', () => {
   removeCompletedTask();
   renderTask(taskList);
   disableBtnAllClear(btnAllClearChecked);
