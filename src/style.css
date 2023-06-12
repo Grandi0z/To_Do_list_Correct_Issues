@@ -1,0 +1,106 @@
+:root {
+  --skyBeige: #c4c0bcf3;
+  --grey_dark: rgba(0, 0, 0, 0.25);
+  --skyGreen: #087474f3;
+  --skyBeigeV2: #90918cf3;
+  --white: #fff;
+  --colorDisable: #414240f3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main[class="main_container"] {
+  width: 50%;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.input-group_add_task {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.input_insert_task {
+  padding: 0.6rem 0;
+  width: 91%;
+  border-style: solid none solid none;
+  border: 0.1rem var(--grey_dark);
+  box-sizing: content-box;
+  background-color: var(--skyBeige);
+}
+
+.btn_add_task {
+  padding: 0.6rem 0;
+  box-sizing: content-box;
+  flex-grow: 1;
+  border-style: solid none solid none;
+  border: 0.1rem var(--grey_dark);
+  background-color: var(--skyBeige);
+  cursor: pointer;
+}
+
+.btn_add_task:active {
+  color: var(--skyGreen);
+}
+
+.btn_add_task:hover {
+  opacity: 0.5;
+}
+
+.hidden {
+  display: none;
+}
+
+/* task_item */
+
+.task_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  background-color: var(--skyBeigeV2);
+}
+
+.task_item_btn {
+  border: none;
+  background-color: var(--skyBeigeV2);
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.task_item_btn:hover {
+  opacity: 0.7;
+}
+
+.btn_clear_all_completed_tasks {
+  width: 99%;
+  box-sizing: content-box;
+  padding: 0.6rem 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.btn_clear_all_completed_tasks:hover {
+  opacity: 0.5;
+}
+
+.btn_clear_all_completed_tasks:active {
+  color: var(--white);
+}
+
+.btn_clear_all_completed_tasks:disabled {
+  color: var(--colorDisable);
+  cursor: none;
+}
+
+.disable {
+  text-decoration: line-through red;
+}
